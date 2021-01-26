@@ -1,0 +1,22 @@
+digraph G {
+    compound=true
+    rankdir=LR
+    node [shape=box]
+
+    include(CTreeColor.dot)
+
+    "1年前期" ->
+    "1年後期" ->
+    "2年前期" ->
+    "2年後期" ->
+    "3年前期" ->
+    "3年後期" ->
+    "4年前期" ->
+	"4年後期" [style="invis"]
+
+    include(CTreeEnglish.dot)
+
+    include(CTreeScience.dot)
+
+
+}

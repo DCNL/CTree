@@ -1,0 +1,63 @@
+digraph G {
+    compound=true
+    rankdir=LR
+    node [shape=box]
+
+    include(CTreeColor.dot)
+
+    "1年前期" ->
+    "1年後期" ->
+    "2年前期" ->
+    "2年後期" ->
+    "3年前期" ->
+    "3年後期" ->
+    "4年前期" ->
+	"4年後期" [style="invis"]
+
+    Chem1 [label="化学 I";style="dashed"]
+    Chem2 [label="化学 II";style="dashed"]
+    Chem3 [label="化学 I";style="dashed"]
+    Chem4 [label="化学 II";style="dashed"]
+    Chem5 [label="化学 I";style="dashed"]
+    Chem6 [label="化学 II";style="dashed"]
+    Chem7 [label="化学 I";style="dashed"]
+    Chem8 [label="化学 II";style="dashed"]
+
+    Chem1->Chem2->Chem3->Chem4->Chem5->Chem6->Chem7->Chem8
+    [style="invis"]
+
+    数学入門I
+	-> 数学入門II
+    基礎解析I
+	-> 基礎解析II
+    {
+        rank = same
+	解析学I
+	解析学I演習
+    }
+
+    {
+        rank = same
+	解析学II
+	解析学II演習
+    }
+
+    解析学I
+        -> 解析学II
+        -> 解析学III
+
+    "English Basic L&S I",
+    "English Basic L&S II",
+    "English Intermediate L&S I",
+    "English Intermediate L&S II",
+    "English Basic R&W I",
+    "English Basic R&W II",
+    "English Intermediate R&W I",
+    "English Intermediate R&W II"
+    RStyle
+    
+    "English for Specific Purpose I",
+    "English for Specific Purpose II"
+    DStyle
+
+}

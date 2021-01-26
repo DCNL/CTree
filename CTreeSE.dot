@@ -1,0 +1,76 @@
+digraph G {
+    compound=true;
+    rankdir = LR
+    ranksep = 1.3
+    node [shape=box]
+
+    include(CTreeColor.dot)
+#    include(CTreeInternational.dot)
+#    include(CTreeForeign.dot)
+#    include(CTreeLiberalArts.dot)
+#    include(CTreeEnglish.dot)
+#    include(CTreeScience.dot)
+    include(CTreeCommon.dot)
+    include(CTreeGrade.dot)
+
+    graph [labelloc="t", labeljust="r", label="システムエンジニアリング(SE)コース",fontsize=30]
+    // 必修
+    基礎ゼミ,
+    コンピュータリテラシー,
+    情報工学輪講,
+    GT1s, GT1, GT2s, GT2
+#    卒業研究I,
+#    卒業研究II
+    RStyle
+
+    // コース指定
+    プログラミングI,
+    プログラミングII,
+    情報メディア実験,
+    応用プログラミング,
+    データ構造とアルゴリズムI,
+    データ構造とアルゴリズムII,
+    システム設計論,
+    情報工学特講A,
+    情報工学特講B
+    DStyle
+    
+    // コースコア
+    情報工学概論,
+    データリテラシー,
+    プログラミング基礎I,
+    プログラミング基礎II,
+    オブジェクト指向プログラミング,
+    オープンソースソフトウェア,    
+    計算機工学,
+    コンピュータアーキテクチャI,
+    コンピュータネットワーク,
+    データベース,
+    情報セキュリティ,
+    コンパイラ,    
+    情報リスクマネジメント,
+    "Webアプリケーション&サービス",
+    ヒューマンインターフェース,
+    情報コミュニケーション技術,
+    日本語コミュニケーションI,
+    技術者倫理,
+    知的財産権
+    CStyle
+
+
+#    "English Basic L&S I",
+#    "English Basic L&S II",
+#    "English Intermediate L&S I",
+#    "English Intermediate L&S II",
+#    "English Basic R&W I",
+#    "English Basic R&W II",
+#    "English Intermediate R&W I",
+#    "English Intermediate R&W II"
+#    RStyle
+    
+#    "English for Specific Purpose I",
+#    "English for Specific Purpose II"
+#    DStyle
+
+#    include(CTreeGrade.dot)
+}

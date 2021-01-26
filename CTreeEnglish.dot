@@ -1,0 +1,36 @@
+    German1 [label="1年ドイツ語I"; style="dashed"]
+    German2 [label="1年ドイツ語II"; style="dashed"]
+    German3 [label="2年ドイツ語I"; style="dashed"]
+    German4 [label="2年ドイツ語II"; style="dashed"]
+    
+    EW1 [label="English Workshop I";style="dashed"]
+    EW2 [label="English Workshop II";style="dashed"]
+    EW3 [label="English Workshop I";style="dashed"]
+    EW4 [label="English Workshop II";style="dashed"]
+    EW5 [label="English Workshop I";style="dashed"]
+    EW6 [label="English Workshop II";style="dashed"]
+    EW7 [label="English Workshop I";style="dashed"]
+    EW8 [label="English Workshop II";style="dashed"]
+
+    German1->German2->German3->German4
+    
+    EW1->EW2->EW3->EW4->EW5->EW6->EW7->EW8
+    [style="invis"]
+
+    "English Basic L&S I"
+	-> "English Basic L&S II"
+	-> "English Intermediate L&S I"
+	-> "English Intermediate L&S II"
+	-> "English for Specific Purpose I"
+    "English Basic R&W I"
+	-> "English Basic R&W II"
+	-> "English Intermediate R&W I"
+	-> "English Intermediate R&W II"
+	-> "English for Specific Purpose I"
+
+    "English for Specific Purpose I"    
+	-> "English for Specific Purpose II" [style="invis"]
+    "English Intermediate L&S II"
+	-> "English for Specific Purpose II"
+    "English Intermediate R&W II"
+	-> "English for Specific Purpose II"

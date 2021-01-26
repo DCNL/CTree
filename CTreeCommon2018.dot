@@ -1,0 +1,215 @@
+    {
+	rank = same;
+	情報工学概論
+	基礎ゼミ 
+	コンピュータリテラシー
+    }
+
+    計算機工学
+    
+    subgraph clusterP1 {
+        style=rounded
+	プログラミング基礎I -> プログラミングI [constraint=false];
+    }
+
+    subgraph clusterD1 {
+        style=rounded
+	デザイン表現法・演習
+	ディジタルデザイン基礎実習
+	CAD実習
+    }
+    
+    情報工学概論 -> 計算機工学;
+    情報工学概論 -> プログラミングI [lhead=clusterP1];
+    コンピュータリテラシー -> プログラミングI
+    基礎ゼミ -> プログラミング基礎I [lhead=clusterP1];
+    基礎ゼミ ->    ディジタルデザイン基礎実習[lhead=clusterD1];
+    基礎ゼミ -> 情報工学特講A [lhead=clusterC1];
+
+    {
+	rank = same
+	電子回路
+	論理回路
+	情報セキュリティ
+	情報メディア実験
+	離散構造
+	信号処理
+	ディジタルデザイン応用実習
+    }
+
+    subgraph clusterP2 {
+        style=rounded
+	データ構造とアルゴリズムI
+	プログラミング基礎II -> プログラミングII[constraint=false];
+    }
+
+    計算機工学 -> 論理回路 
+    プログラミングI -> 情報メディア実験 [ltail=clusterP1]
+    プログラミングI -> プログラミングII
+    プログラミング基礎I -> プログラミング基礎II
+    ディジタルデザイン基礎実習 -> ディジタルデザイン応用実習 [ltail=clusterD1]
+
+    {
+	rank = same
+	センサ工学
+	コンピュータネットワーク
+	データベース
+	確率統計
+	人工知能
+	音と音声
+    }
+    
+    subgraph clusterSS {
+        style=rounded
+	アセンブリ言語
+	コンピュータアーキテクチャI
+    }
+    
+    subgraph clusterP3 {
+        style=rounded
+	データ構造とアルゴリズムII
+	応用プログラミング
+    }
+    
+    subgraph clusterD2 {
+        style=rounded
+	Webデザイン論
+	視覚デザイン・演習
+	感性デザイン論
+	色彩計画
+    }
+
+    subgraph clusterC1 {
+        style=rounded
+	情報コミュニケーション技術
+	情報工学特講A
+	日本語コミュニケーションI
+    }
+    
+    電子回路 -> センサ工学    
+    論理回路 -> アセンブリ言語
+    論理回路 -> コンピュータアーキテクチャI
+    情報セキュリティ -> コンピュータネットワーク
+    データ構造とアルゴリズムI ->   データベース[ltail=clusterP2]
+    データ構造とアルゴリズムI ->   データ構造とアルゴリズムII
+    プログラミングII -> 応用プログラミング	
+    離散構造 -> 確率統計
+    離散構造 -> 人工知能
+    信号処理 -> 音と音声
+    ディジタルデザイン応用実習 -> 視覚デザイン・演習 [lhead=clusterD2]
+
+    subgraph clusterS1 {
+        style=rounded
+	情報機器インターフェース
+	スマートシステム演習
+	オペレーティングシステム
+	コンピュータアーキテクチャII
+    }
+
+    {
+	rank = same
+	通信工学
+	コンパイラ
+	オブジェクト指向プログラミング
+	自然言語処理
+	視覚デザイン論
+    }
+    
+    subgraph clusterW1 {
+        style=rounded
+   	"Webアプリケーション&サービス"-> "Webアプリケーション&サービス演習"[constraint=false];
+    }
+    
+    subgraph clusterV1 {
+        style=rounded
+	ビジュアルコンピューティング演習
+	シミュレーションとモデル
+   	グラフィックスの理論
+    }
+    
+    subgraph clusterC2 {
+        style=rounded
+	オープンソースソフトウェア
+	情報工学と職業
+	技術者倫理
+	日本語コミュニケーションII
+    }
+
+     電子回路 -> 情報機器インターフェース [lhead=clusterS1]
+    センサ工学 -> スマートシステム演習
+    アセンブリ言語 -> オペレーティングシステム [lhead=clusterS1]
+    コンピュータアーキテクチャI -> コンピュータアーキテクチャII
+    コンピュータネットワーク -> 通信工学
+    コンピュータネットワーク -> "Webアプリケーション&サービス" [lhead=clusterW1]
+    情報メディア実験 -> スマートシステム演習
+    情報メディア実験 -> "Webアプリケーション&サービス" [lhead=clusterW1]
+    データベース -> "Webアプリケーション&サービス" [lhead=clusterW1]
+    データ構造とアルゴリズムII -> コンパイラ [ltail=clusterP3]
+    応用プログラミング -> オブジェクト指向プログラミング
+    応用プログラミング -> ビジュアルコンピューティング演習 [ltail=clusterP3;lhead=clusterV1]
+    人工知能  -> 自然言語処理
+    人工知能  -> シミュレーションとモデル [lhead=clusterV1]
+    Webデザイン論 -> "Webアプリケーション&サービス演習" [lhead=clusterW1]
+    視覚デザイン・演習 ->  グラフィックスの理論 [ltail=clusterD2]
+    視覚デザイン・演習 ->  視覚デザイン論
+    情報工学特講A -> 情報工学と職業 [ltail=clusterC1;lhead=clusterC2]
+    日本語コミュニケーションI -> 日本語コミュニケーションII
+    
+    {
+	rank = same
+	ロボット工学
+	パターン認識と機械学習
+	画像工学
+	コンピュータグラフィックス
+    }
+    
+    subgraph clusterS2 {
+        style=rounded
+	システム設計論
+	プログラミング言語
+    }
+    
+    subgraph clusterC3 {
+        style=rounded
+	ヒューマンインターフェース
+	情報工学特講B
+	情報とモノづくり
+	情報技術者演習
+	知的財産権
+	テクニカルライティング	
+	学外実習
+    }
+
+    情報機器インターフェース -> ロボット工学
+    コンピュータアーキテクチャI -> システム設計論 [style="invis"]
+    オペレーティングシステム -> システム設計論 [ltail=clusterS1; lhead=clusterS2]
+    コンパイラ -> プログラミング言語 [lhead=clusterS2]
+    オブジェクト指向プログラミング -> プログラミング言語 [lhead=clusterS2]
+    自然言語処理 -> パターン認識と機械学習
+    "Webアプリケーション&サービス" -> システム設計論 [lhead=clusterS2;ltail=clusterW1]
+    シミュレーションとモデル->パターン認識と機械学習 [ltail=clusterV1]
+    情報工学と職業 -> 情報技術者演習 [ltail=clusterC2;lhead=clusterC3]
+    グラフィックスの理論 -> コンピュータグラフィックス
+    グラフィックスの理論 -> 画像工学
+
+    subgraph clusterGT {
+        style=rounded
+  	卒業研究I -> 卒業研究II
+	情報工学輪講
+    }
+
+    ロボット工学 -> 卒業研究I [lhead=clusterGT]
+    プログラミング言語 -> 卒業研究I [ltail=clusterS2;lhead=clusterGT]
+    パターン認識と機械学習 -> 卒業研究I [lhead=clusterGT]
+    コンピュータグラフィックス -> 情報工学輪講 [lhead=clusterGT]
+    画像工学 -> 情報工学輪講 [lhead=clusterGT]
+    情報技術者演習 -> 情報工学輪講 [ltail=clusterC3;lhead=clusterGT]
+
+    論理回路 -> 電子回路 [style="invis"]
+    情報工学概論 -> 情報セキュリティ [style="invis"]
+    離散構造 -> 情報コミュニケーション技術 [style="invis"]
+    音と音声 -> シミュレーションとモデル [style="invis"]
+    プログラミング基礎I -> 離散構造 [style="invis"]
+    離散構造 ->応用プログラミング [style="invis"]
+    離散構造 ->音と音声 [style="invis"]
+    視覚デザイン論 ->画像工学 [style="invis"]

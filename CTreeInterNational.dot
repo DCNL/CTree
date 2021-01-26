@@ -1,0 +1,60 @@
+{
+    subgraph clusterIC {
+	label="国際コース"; fontsize=25
+	style="dashed"
+	subgraph clusterICE {
+	    label="国際コース専用専門基礎"; fontsize=20
+	    style="dashed"
+	    dummy [style="invis"]
+	    "Test Preparation I-A" ->
+		"Test Preparation II-A" ->
+		"Test Preparation III-A"
+	    "Test Preparation I-B"->
+		"Test Preparation II-B"->
+		"Test Preparation III-B"
+	    "Test Preparation I-C"->
+		"Test Preparation II-C"->
+		"Test Preparation III-C"
+	    "English Grammar" ->
+		dummy -> {"Advanced Writing" "Academic Skills"} [style="invis"]
+	}
+	subgraph clusterICM {
+	    label="国際コース専用専門科目"; fontsize=20
+	    style="dashed"
+
+            { rank = same
+    		    STE1 [label="Special Topics in English I"]
+		    ME1  [label="Mathematics in English I"]
+		    PE1   [label="Physics in English I"]
+		    CLE1 [label="Computer Literacy in English I"]
+	    }
+            { rank = same
+    		    STE2 [label="Special Topics in English II"]
+		    ME2  [label="Mathematics in English II"]
+		    PE2   [label="Physics in English II"]
+		    CLE2 [label="Computer Literacy in English II"]
+	      	    SEE [ label="Safety Engineering in English"]
+	    }
+            { rank = same
+    		    STE3 [label="Special Topics in English III"]
+		    ESP [label="English for Scientific Purposes"]
+		    MEE  [label="Mechanical Engineering in English"]
+		    BEC [label="Basic Electric Circuits in English"]
+		    DBE1 [label="Design Basics in English I"]
+		    DBE2 [label="Design Basics in English II"]
+		    SAT1 [label="Science and Technology in English I"]
+		    SAT2 [label="Science and Technology in English II"]
+	    }
+
+	    CLE1 -> CLE2
+	    PE1 -> PE2
+	    ME1 -> ME2
+
+	    SEE -> DBE1[style=invis]
+	    ME2 -> ESP[style=invis]
+	    PE2 -> MEE[style=invis]
+	    CLE2 -> BEC[style=invis]
+	    STE1 -> STE2 -> STE3
+	}
+    }
+}

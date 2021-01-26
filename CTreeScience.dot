@@ -1,0 +1,54 @@
+{
+    Chem1 [label="化学 I"]
+    Chem2 [label="化学 II"]
+    Chem3 [label="化学 I"]
+    Chem4 [label="化学 II"]
+    Chem5 [label="化学 I"]
+    Chem6 [label="化学 II"]
+    Chem7 [label="化学 I"]
+    Chem8 [label="化学 II"]
+
+    Chem1->Chem2
+    Chem3->Chem4
+    Chem5->Chem6
+    Chem7->Chem8
+
+    Chem2->Chem3[style="invis"]
+    Chem4->Chem5[style="invis"]
+    Chem6->Chem7[style="invis"]
+
+    SL1 [label="基礎科学実験"]
+    物理学I
+    線形代数I
+    解析学I
+    基礎解析I
+    数学入門I
+
+    subgraph clusterM1 {
+        style=rounded
+	解析学I演習
+	解析学I
+    }
+
+    SL2 [label="基礎科学実験"]
+    物理学II
+    線形代数II
+    解析学II
+    基礎解析II
+    数学入門II
+
+    物理学I	-> 物理学II
+    線形代数I -> 線形代数II
+    数学入門I -> 数学入門II
+    基礎解析I -> 基礎解析II
+
+    SL1 -> SL2 [style=invis]
+
+    subgraph clusterM2 {
+        style=rounded
+	解析学II演習
+	解析学II
+    }
+
+    解析学I -> 解析学II -> 解析学III
+}

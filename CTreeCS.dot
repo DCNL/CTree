@@ -1,0 +1,75 @@
+digraph G {
+    compound=true;
+    rankdir = LR
+    ranksep = 1.3
+    node [shape=box]
+
+    include(CTreeColor.dot)
+#    include(CTreeInternational.dot)
+#    include(CTreeForeign.dot)
+    include(CTreeLiberalArts.dot)
+    include(CTreeEnglish.dot)
+    include(CTreeScience.dot)
+    include(CTreeCommon.dot)
+
+    graph [labelloc="t", labeljust="r", label="コンピュータソフトウェア(CS)コース",fontsize=30]
+    // 必修
+    基礎ゼミ,
+    コンピュータリテラシー,
+    情報工学輪講,
+     GT1s, GT1, GT2s, GT2
+#    卒業研究I,
+#    卒業研究II
+    RStyle
+    
+    // コース指定
+    プログラミングI,
+    プログラミングII,
+    情報メディア実験,
+    オブジェクト指向プログラミング,
+    データ構造とアルゴリズムI,
+    データ構造とアルゴリズムII,
+    プログラミング言語,
+    情報工学特講A,
+    情報工学特講B
+    DStyle
+
+    // コースコア
+    情報工学概論,
+    プログラミング基礎I,
+    プログラミング基礎II,
+    応用プログラミング,
+    アセンブリ言語,
+    システム設計論,
+    オープンソースソフトウェア,
+    計算機工学,
+    コンピュータアーキテクチャI,
+    コンピュータネットワーク,
+    データベース,
+    オペレーティングシステム,
+    コンパイラ,
+    ヒューマンインターフェース,
+    パターン認識と機械学習,
+    情報コミュニケーション技術,
+    技術者倫理,
+    知的財産権,
+    データリテラシー
+    CStyle
+
+
+    "English Basic L&S I",
+    "English Basic L&S II",
+    "English Intermediate L&S I",
+    "English Intermediate L&S II",
+    "English Basic R&W I",
+    "English Basic R&W II",
+    "English Intermediate R&W I",
+    "English Intermediate R&W II"
+    RStyle
+    
+    "English for Specific Purpose I",
+    "English for Specific Purpose II"
+    DStyle
+
+include(CTreeGrade.dot)
+}

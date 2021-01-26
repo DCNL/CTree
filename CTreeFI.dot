@@ -1,0 +1,30 @@
+digraph G {
+    compound=true;
+    rankdir = LR
+    ranksep = 1.3
+    node [shape=box]
+
+   {
+     FID1 [style="invis"]
+     FID2 [style="invis"]
+     FID3 [style="invis"]
+     FID4 [style="invis"]
+     FID5 [style="invis"]
+     FID6 [style="invis"]
+     FID7 [style="invis"]
+     FID8 [style="invis"]
+   }
+#    include(CTreeColor.dot)
+    include(CTreeInternational.dot)
+
+     FID0 [style="invis"]
+
+     include(CTreeForeign.dot)
+#    include(CTreeLiberalArts.dot)
+#    include(CTreeEnglish.dot)
+#    include(CTreeScience.dot)
+#    include(CTreeCommon.dot)
+     include(CTreeGrade.dot)
+     
+    graph [labelloc="t", labeljust="r", label="留学生対象科目 / 国際コース専用科目",fontsize=25]
+}

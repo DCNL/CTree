@@ -1,0 +1,76 @@
+digraph G {
+    compound=true;
+    rankdir = LR
+    ranksep = 1.3
+    node [shape=box]
+
+    include(CTreeColor.dot)
+#    include(CTreeInternational.dot)
+#    include(CTreeForeign.dot)
+#    include(CTreeLiberalArts.dot)
+#    include(CTreeEnglish.dot)
+#    include(CTreeScience.dot)
+    include(CTreeCommon.dot)
+
+graph [labelloc="t", labeljust="r", label="知能情報(AI)コース",fontsize=30]
+    // 必修
+    基礎ゼミ,
+    コンピュータリテラシー,
+    情報工学輪講,
+    GT1s, GT1, GT2s, GT2
+#    卒業研究I,
+#    卒業研究II
+    RStyle
+
+    // コース指定
+    確率統計,
+    プログラミングI,
+    プログラミングII,
+    情報メディア実験,
+    知的データ処理演習,
+    人工知能,
+    パターン認識と機械学習,
+    情報工学特講A,
+    情報工学特講B
+    DStyle
+
+    // コースコア
+    情報工学概論,
+    データリテラシー,
+    離散構造,
+    プログラミング基礎I,
+    プログラミング基礎II,
+    スマートシステム演習,
+    "Webアプリケーション&サービス演習",
+    データ構造とアルゴリズムI,
+    データ構造とアルゴリズムII,
+    オープンソースソフトウェア,
+    システム設計論,
+    計算機工学,
+    ロボット工学,
+    データベース,
+    シミュレーションとモデル,
+    自然言語処理,
+    情報コミュニケーション技術,
+    AIと社会,
+    技術者倫理,
+    知的財産権
+    CStyle
+
+
+#    "English Basic L&S I",
+#    "English Basic L&S II",
+#    "English Intermediate L&S I",
+#    "English Intermediate L&S II",
+#    "English Basic R&W I",
+#    "English Basic R&W II",
+#    "English Intermediate R&W I",
+#    "English Intermediate R&W II"
+#    RStyle
+    
+#    "English for Specific Purpose I",
+#    "English for Specific Purpose II"
+#    DStyle
+
+    include(CTreeGrade.dot)
+}

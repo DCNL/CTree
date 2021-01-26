@@ -1,0 +1,16 @@
+digraph G {
+    compound=true;
+    rankdir = LR
+    ranksep = 1.3
+    node [shape=box]
+
+    include(CTreeColor.dot)
+#    include(CTreeInternational.dot)
+#    include(CTreeForeign.dot)
+#    include(CTreeLiberalArts.dot)
+#    include(CTreeEnglish.dot)
+#    include(CTreeScience.dot)
+    include(CTreeCommon.dot)
+    include(CTreeGrade.dot)
+
+}

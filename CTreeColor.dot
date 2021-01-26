@@ -1,0 +1,14 @@
+define(`CStyle',
+	ifdef(`COLOR', 
+	    ``[style=filled,fillcolor=yellow]'',
+	        ``[style=filled]''))
+
+define(`DStyle',
+	ifdef(`COLOR', 
+	    ``[style=filled,fillcolor=orange]'',
+	        ``[style=filled,penwidth=4]''))
+
+define(`RStyle',
+	ifdef(`COLOR', 
+	    ``[style=filled,fillcolor=orangered]'',
+	        ``[style=filled,fontname=bold,fontcolor=white,fillcolor=black,penwidth=4]''))

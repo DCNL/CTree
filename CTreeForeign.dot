@@ -1,0 +1,37 @@
+{
+        JPD1 [style="invis"]
+        JPD2 [style="invis"]
+	JPG1 [label= "総合日本語(1)"]
+	JPG2 [label= "総合日本語(2)"]
+	JPE1 [label= "工学日本語(1)"]
+	JPE2 [label= "工学日本語(2)"]
+	JPG3 [label= "総合日本語(3)"]
+	JPG4 [label= "総合日本語(4)"]
+	JPE3 [label= "工学日本語(3)"]
+	JPE4 [label= "工学日本語(4)"]
+
+	subgraph clusterFS {
+		 label = "留学生対象科目"; fontsize=25
+		 style=dashed
+		 subgraph clusterFS1 {
+		 	  label=""
+			  JPE2
+			  JPD1 -> JPE1 [style="invis"]
+		}
+		 subgraph clusterFS2 {
+		 	  label=""
+			  JPE4
+		 	  JPD2 -> JPE3 [style="invis"]
+	}
+		 subgraph clusterFS3 {
+		 	  label=""
+			  JPG1 -> JPG2 [style="invis"]
+		}
+		 subgraph clusterFS4 {
+		 	  label=""
+			  JPG3 -> JPG4 [style="invis"]
+		}
+		JPG2 -> JPG3 [ltail=clusterFS3;lhead=clusterFS4]
+		JPE1 -> JPD2 [ltail=clusterFS1;lhead=clusterFS2]
+	}
+}

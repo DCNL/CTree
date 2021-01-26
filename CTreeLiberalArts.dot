@@ -1,0 +1,16 @@
+{
+	fontsize=18
+	label="教養教育科目"
+	LA1 [label="　　　　教養教育科目";style=invis]
+	LA2 [style=invis]
+	LA3 [style=invis]
+	LA4 [style=invis]
+	LA5 [style=invis]
+	LA6 [style=invis]
+	LA7 [style=invis]
+	LA8 [label="　　　　教養教育科目";style=invis]
+	subgraph clusterLA {
+	      style=rounded
+	      LA1 ->  LA2 ->  LA3 ->  LA4 ->  LA5 ->  LA6 ->  LA7 ->  LA8[style=invis]
+	}
+}

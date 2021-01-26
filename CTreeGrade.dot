@@ -1,0 +1,17 @@
+{
+    node [fontsize=20; shape=plaintext];
+    G1S [label="1年前期"]
+    G1F [label="1年後期"]
+    G2S [label="2年前期"]
+    G2F [label="2年後期"]
+    G3S [label="3年前期"]
+    G3F [label="3年後期"]
+    G4S [label="4年前期"]
+    G4F [label="4年後期"]
+    {
+        rank = same;
+	G1S
+	dummy2 [style="invis"]
+    }
+    G1S -> G1F -> G2S -> G2F -> G3S -> G3F -> G4S -> G4F  [style="invis"]
+}

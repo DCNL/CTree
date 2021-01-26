@@ -1,0 +1,347 @@
+# 1年前期
+
+    {
+	rank = same
+	rankdir = TB
+	D1S [style="invis"]
+	 情報工学概論 -> コンピュータリテラシー -> 基礎ゼミ -> D1S [style="invis"]
+	
+    }
+
+# 1年後期
+
+       subgraph clusterP1 {
+    	    style=rounded
+	    プログラミング基礎I -> プログラミングI [constraint=false];
+	}
+
+
+	subgraph clusterD1 {
+	        style=rounded
+		CAD実習
+		ディジタルデザイン基礎実習
+		デザイン表現法・演習
+	}
+
+   {
+	rank = same
+	rankdir = TB
+	計算機工学
+   }
+	
+
+# 1年後期への接続
+
+     情報工学概論 -> 計算機工学;
+     情報工学概論 -> プログラミングI [lhead=clusterP1]#, constraint=false]
+     基礎ゼミ -> プログラミング基礎I [lhead=clusterP1];
+     コンピュータリテラシー -> プログラミング基礎I [lhead=clusterP1];
+     コンピュータリテラシー -> ディジタルデザイン基礎実習 [style="invis"]
+     D1S -> ディジタルデザイン基礎実習 [lhead=clusterD1, style="invis"]
+     基礎ゼミ -> ディジタルデザイン基礎実習 [lhead=clusterD1]
+
+# # 2年前期
+
+    subgraph clusterA0 {
+    	     style=invis
+	     離散構造
+	     確率統計
+	     データベース
+	     データリテラシー
+	     AIと社会
+    }
+    
+     subgraph clusterP2 {
+         style=rounded
+	 { rank = same; rankdir=TB
+		情報メディア実験
+		プログラミング基礎II
+		プログラミングII
+	  	データ構造とアルゴリズムI
+	}
+ 	プログラミング基礎II -> プログラミングII
+     }
+
+     subgraph clusterD2s {
+       	      style=rounded
+	      ユーザエクスペリエンスデザイン
+	      ディジタルデザイン応用実習
+	      色彩計画
+    }
+
+    subgraph clusterH1 {
+    	     style=rounded
+	     電子回路
+	     センサ工学
+	     論理回路
+    }
+
+    {
+ 	rank = same
+	rankdir = TB
+ 	
+     コンピュータネットワーク
+ 	D2S1 [style="invis"] # 配置用のダミー
+ 	D2S2  [style="invis"] # 配置用のダミー
+ 	 
+# 	電子回路 -> センサ工学 -> 論理回路 -> コンピュータネットワーク[style="invis"]
+# 	離散構造 -> データリテラシー -> AIと社会 -> D2S1 [style="invis"]
+# 	コンピュータネットワーク -> 離散構造 -> 確率統計 -> データベース ->  データリテラシー -> AIと社会 -> D2S1 [style="invis"]
+     }
+    
+# #  2年前期への接続
+
+     プログラミングI -> プログラミングII
+     プログラミングI -> 情報メディア実験 [constraint=false]
+     プログラミング基礎I -> プログラミング基礎II
+
+     計算機工学 -> 論理回路 
+     計算機工学 -> 確率統計
+#     計算機工学 -> センサ工学
+     計算機工学 -> 電子回路 [style="invis"]
+#     計算機工学 -> コンピュータネットワーク#[style="invis"]
+
+     情報工学概論 -> コンピュータネットワーク#[constraint=false]
+
+     ディジタルデザイン基礎実習 -> ディジタルデザイン応用実習 [ltail=clusterD1;lhead=clusterD2s]
+
+     コンピュータリテラシー -> データリテラシー
+
+     プログラミング基礎I -> データリテラシー[constraint=false;ltail=clusterP1]
+
+     プログラミング基礎I -> 離散構造[constraint=false;ltail=clusterP1]
+
+     基礎ゼミ -> AIと社会 [style="invis"]
+
+#     情報工学概論 -> コンピュータネットワーク
+
+# # 2年後期
+
+     subgraph clusterC1 {
+         style=rounded
+ 	情報コミュニケーション技術
+ 	情報工学特講A
+     }
+
+     subgraph clusterD2 {
+         style=rounded
+ 	Webデザイン論
+ 	感性デザイン論
+ 	視覚デザイン・演習
+     }
+    
+     subgraph clusterP3 {
+         style=rounded
+ 	データ構造とアルゴリズムII
+ 	応用プログラミング
+     }
+
+     subgraph clusterSec {
+         style=rounded
+ 	情報セキュリティ
+ 	サイバーセキュリティ演習
+     }
+
+     subgraph clusterSS {
+         style=rounded
+ 	アセンブリ言語
+ 	コンピュータアーキテクチャI
+     }
+    
+     {
+ 	rank = same; rankdir=TB
+#	D2F [style="invis"]
+       音と音声 -> 信号処理 -> 人工知能 ->  日本語コミュニケーションI [style="invis"]
+#	電子回路 -> センサ工学
+}
+
+# # 2年後期への接続
+
+     データ構造とアルゴリズムI ->   データ構造とアルゴリズムII
+     プログラミングII -> 応用プログラミング	
+     情報メディア実験 -> 応用プログラミング [constraint=false]
+
+     AIと社会 -> 人工知能
+     コンピュータネットワーク -> 情報セキュリティ[lhead=clusterSec]
+     論理回路 -> コンピュータアーキテクチャI
+     
+#     データリテラシー -> データベース
+#     データリテラシー -> 確率統計
+     データリテラシー -> 人工知能
+
+     電子回路 -> 信号処理 
+     離散構造 -> データ構造とアルゴリズムII
+     ディジタルデザイン応用実習 -> Webデザイン論 [lhead=clusterD2;ltail=clusterD2s]
+     D2S1 -> 情報コミュニケーション技術      [style="invis"]
+     D2S2 -> 日本語コミュニケーションI [style="invis"]
+     基礎ゼミ -> 情報工学特講A
+
+# # 3年前期
+
+     subgraph clusterFEC1 {
+         style=rounded
+ 	技術者倫理
+ 	日本語コミュニケーションII
+     }
+
+     
+    
+     subgraph clusterV1 {
+         style=rounded
+ 	シミュレーションとモデル
+    	グラフィックスの理論
+     }
+     
+     subgraph clusterA1 {
+ 	スマートシステム演習,
+ 	自然言語処理
+     }
+     
+     {
+ 	rank = same
+ 	視覚デザイン論
+ 	情報工学と職業
+	D3S [style="invis"]
+  	情報リスクマネジメント
+ 	通信工学
+     }
+    
+     subgraph clusterP4 {
+         style=rounded
+ 	オブジェクト指向プログラミング
+ 	プログラミング言語
+ 	コンパイラ
+     }
+
+     subgraph clusterS1 {
+         style=rounded
+ 	ロボット工学
+ 	オペレーティングシステム
+ 	コンピュータアーキテクチャII
+     }
+
+# # 3年前期への接続
+    
+#     センサ工学 -> 情報機器インターフェース [lhead=clusterS1]
+#     信号処理 -> 情報機器インターフェース [lhead=clusterS1]
+     信号処理 -> ロボット工学 [lhead=clusterS1]
+     センサ工学 -> ロボット工学 [lhead=clusterS1]
+     コンピュータアーキテクチャI -> コンピュータアーキテクチャII
+     データ構造とアルゴリズムII -> プログラミング言語
+     応用プログラミング -> オブジェクト指向プログラミング
+     視覚デザイン・演習 ->  視覚デザイン論
+     人工知能  -> シミュレーションとモデル
+     人工知能  -> スマートシステム演習 [lhead=clusterA1]
+     情報セキュリティ -> 情報リスクマネジメント[ltail=clusterSec]
+     情報セキュリティ -> 通信工学[ltail=clusterSec]
+     日本語コミュニケーションI -> 日本語コミュニケーションII
+#     情報コミュニケーション技術 -> オープンソースソフトウェア [ltail=clusterC1;lhead=clusterC2]
+     情報コミュニケーション技術 -> 情報工学と職業 [ltail=clusterC1]
+#     情報工学特講A -> D3S [style="invis"]
+     Webデザイン論 -> 技術者倫理 [style="invis"]
+    データ構造とアルゴリズムII -> コンパイラ
+#    データ構造とアルゴリズムII -> コンパイラ [constraint=false]
+    
+
+# # 3年後期
+
+        subgraph clusterFEC2 {
+         style=rounded {
+	 rank = same; rankdir = TB
+# 	テクニカルライティング -> 知的財産権 -> 学外実習 [constraint=false;style="invis"]
+# 	テクニカルライティング -> 知的財産権 -> 学外実習 [style="invis"]
+ 	学外実習 -> テクニカルライティング -> 知的財産権 [style="invis"]
+	}
+     }
+
+    
+     subgraph clusterC3 {
+         style=rounded
+ 	情報工学特講B
+	情報とモノづくり
+ 	情報技術者演習
+     }
+
+     subgraph clusterV2 {
+         style=rounded
+ 	画像工学
+	VRとAR
+ 	コンピュータグラフィックス
+ 	ビジュアルコンピューティング演習
+     }
+    
+     subgraph clusterA2 {
+         style=rounded
+ 	パターン認識と機械学習
+	知的データ処理演習
+     }
+
+     subgraph clusterW1 {
+         style=rounded
+    	"Webアプリケーション&サービス"-> "Webアプリケーション&サービス演習"[constraint=false];
+     }
+
+     subgraph clusterS2 {
+         style=rounded
+ 	システム設計論
+ 	情報機器インターフェース
+	オープンソースソフトウェア
+ 	ヒューマンインターフェース
+     }
+    
+
+# # 3年後期への接続
+
+#     自然言語処理 -> パターン認識と機械学習
+     スマートシステム演習 -> パターン認識と機械学習 [ltail=clusterA1;lhead=clusterA2]
+#     確率統計 -> パターン認識と機械学習
+     技術者倫理 -> 知的財産権 [ltail=clusterFEC1;lhead=clusterFEC2]
+     日本語コミュニケーションII -> テクニカルライティング
+     情報工学と職業 -> 情報とモノづくり [lhead=clusterC3]
+    Webデザイン論 -> ヒューマンインターフェース [style="invis"]
+     情報工学特講A -> 情報工学特講B
+#     スマートシステム演習 -> ロボット工学 [headport = w, ltail = clusterS1]
+     ロボット工学 -> 情報機器インターフェース [ltail = clusterS1]
+     コンピュータアーキテクチャII -> システム設計論 [ltail=clusterS1]
+     オブジェクト指向プログラミング -> システム設計論 [ltail=clusterP4]
+     グラフィックスの理論 -> コンピュータグラフィックス[lhead=clusterV2]
+     情報リスクマネジメント -> "Webアプリケーション&サービス" [lhead=clusterW1]
+     データベース -> "Webアプリケーション&サービス" [lhead=clusterW1]
+     視覚デザイン論 -> "ビジュアルコンピューティング演習" [lhead=clusterV2, constraint=false]
+     
+## 卒業研究
+
+     GT1s [label="卒業研究I"]
+     GT1 [label="卒業研究I"]
+     GT2s [label="卒業研究II"]
+     GT2 [label="卒業研究II"]
+     GT3 [label="特別卒業研究"]
+
+     subgraph clusterGT {
+         style=rounded
+	     GT1s -> GT1 [style="invis"]
+	     GT1s -> 情報工学輪講 [style="invis"]
+
+ 	情報工学輪講
+	subgraph clusterGT2 {
+        	 style=rounded
+	 	GT1 -> GT2
+	}
+	subgraph clusterGT1 {
+        	  style=rounded
+   		  GT1s -> GT2s -> GT3
+	}
+     }
+#     情報機器インターフェース -> GT1s [style="invis"]
+     ロボット工学 -> GT1s [style="invis"]
+     スマートシステム演習 -> GT1s [style="invis"]
+
+#     ロボット工学 -> 情報工学輪講 [lhead=clusterGT]
+     情報機器インターフェース -> 情報工学輪講 [lhead=clusterGT]
+     システム設計論 -> 情報工学輪講 [lhead=clusterGT]
+     "Webアプリケーション&サービス" -> 情報工学輪講 [ltail=clusterW1;lhead=clusterGT]
+     パターン認識と機械学習 -> 情報工学輪講 [lhead=clusterGT]
+     コンピュータグラフィックス -> 情報工学輪講 [lhead=clusterGT;ltail=clusterV2]
+#     コンパイラ -> 情報工学輪講 [lhead=clusterGT;constaint=false]
+     情報とモノづくり -> 情報工学輪講 [lhead=clusterGT;ltail=clusterC3]
+     テクニカルライティング -> 情報工学輪講 [lhead=clusterGT;ltail=clusterFEC2;constaint=false]

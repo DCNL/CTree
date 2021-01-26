@@ -1,0 +1,79 @@
+digraph G {
+    compound=true;
+    rankdir = LR
+    ranksep = 1.3
+    node [shape=box]
+
+    include(CTreeColor.dot)
+#    include(CTreeInternational.dot)
+#    include(CTreeForeign.dot)
+#    include(CTreeLiberalArts.dot)
+#    include(CTreeEnglish.dot)
+#    include(CTreeScience.dot)
+    include(CTreeCommon.dot)
+
+    graph [labelloc="t", labeljust="r", label="ビジュアルコンピューティング(VC)コース",fontsize=30]
+    // 必修
+    基礎ゼミ,
+    コンピュータリテラシー,
+    情報工学輪講,
+     GT1s, GT1, GT2s, GT2
+#    卒業研究I,
+#    卒業研究II
+    RStyle
+
+    // コース指定
+    プログラミングI,
+    プログラミングII,
+    ビジュアルコンピューティング演習,
+    シミュレーションとモデル,
+    コンピュータグラフィックス,
+    情報工学特講A,
+    情報工学特講B,
+    デザイン表現法・演習,
+    ディジタルデザイン応用実習
+    DStyle
+
+    // コースコア
+    情報工学概論,
+    データリテラシー,
+    離散構造,
+    プログラミング基礎I,
+    プログラミング基礎II,
+    情報メディア実験,
+    応用プログラミング,
+    "Webアプリケーション&サービス演習",
+    データ構造とアルゴリズムI,
+    データ構造とアルゴリズムII,
+    人工知能,
+    グラフィックスの理論,
+    ヒューマンインターフェース,
+    VRとAR,
+    画像工学,
+    パターン認識と機械学習,
+    知的財産権,
+    ディジタルデザイン基礎実習,
+    CAD実習,
+    色彩計画,
+    感性デザイン論,
+    Webデザイン論,
+    視覚デザイン論,
+    視覚デザイン・演習
+    CStyle
+
+#    "English Basic L&S I",
+#    "English Basic L&S II",
+#    "English Intermediate L&S I",
+#    "English Intermediate L&S II",
+#    "English Basic R&W I",
+#    "English Basic R&W II",
+#    "English Intermediate R&W I",
+#    "English Intermediate R&W II"
+#    RStyle
+    
+#    "English for Specific Purpose I",
+#    "English for Specific Purpose II"
+#    DStyle
+
+    include(CTreeGrade.dot)
+}

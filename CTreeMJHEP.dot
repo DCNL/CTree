@@ -1,0 +1,62 @@
+digraph G {
+    compound=true;
+    rankdir = LR
+    ranksep = 1.3
+    node [shape=box]
+
+    include(CTreeColor.dot)
+#    include(CTreeInternational.dot)
+#    include(CTreeForeign.dot)
+    include(CTreeLiberalArts.dot)
+    include(CTreeEnglish.dot)
+    include(CTreeScience.dot)
+    include(CTreeCommon.dot)
+
+define(`AStyle',
+	ifdef(`COLOR', 
+	    ``[style=filled,fillcolor=green]'',
+	        ``[style=filled,fontname=bold,fontcolor=white,fillcolor=black,penwidth=4]''))
+
+    graph [labelloc="t", labeljust="r", label="MJHEP認定単位(専門&専門基礎)",fontsize=30]
+    基礎ゼミ,
+    コンピュータリテラシー,
+    プログラミングI,
+    データ構造とアルゴリズムI,
+    情報メディア実験,
+    情報工学特講A,
+    情報工学概論,
+    プログラミング基礎I,
+    電子回路,
+    センサ工学,
+    信号処理,
+    論理回路,
+    計算機工学,
+    離散構造,
+    確率統計,
+    情報コミュニケーション技術,
+    日本語コミュニケーションI,
+    コンピュータアーキテクチャI,
+    解析学I,
+    解析学II,
+    線形代数I,
+    線形代数II,
+    物理学I,
+    物理学II,
+    SL1,
+    Chem1,
+    Chem2
+    AStyle
+
+
+    "English Basic L&S I",
+    "English Basic L&S II",
+    "English Intermediate L&S I",
+    "English Intermediate L&S II",
+    "English Basic R&W I",
+    "English Basic R&W II",
+    "English Intermediate R&W I",
+    "English Intermediate R&W II"
+    AStyle
+
+    include(CTreeGrade.dot)
+}
