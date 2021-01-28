@@ -11,13 +11,14 @@ digraph G {
 #    include(CTreeEnglish.dot)
 #    include(CTreeScience.dot)
     include(CTreeCommon.dot)
+    include(CTreeGrade.dot)
 
-    graph [labelloc="t", labeljust="r", label="ビジュアルコンピューティング(VC)コース",fontsize=30]
+    graph [labelloc="t", labeljust="r", label="システムエンジニアリング(CSE)コース",fontsize=30]
     // 必修
     基礎ゼミ,
     コンピュータリテラシー,
     情報工学輪講,
-     GT1s, GT1, GT2s, GT2
+    GT1s, GT1, GT2s, GT2
 #    卒業研究I,
 #    卒業研究II
     RStyle
@@ -25,13 +26,13 @@ digraph G {
     // コース指定
     プログラミングI,
     プログラミングII,
-    ビジュアルコンピューティング演習,
-    シミュレーションとモデル,
-    コンピュータグラフィックス,
+    情報メディア実験,
+    データ構造とアルゴリズム,
+    データ構造とアルゴリズム演習,
+    ソフトウェア工学,
+    ソフトウェア工学演習,
     情報工学特講A,
-    情報工学特講B,
-    デザイン表現法・演習,
-    ディジタルデザイン応用実習
+    情報工学特講B
     DStyle
 
     // コースコア
@@ -39,25 +40,23 @@ digraph G {
     データリテラシー,
     プログラミング基礎I,
     プログラミング基礎II,
-    データ構造とアルゴリズム演習,
-    情報メディア実験,
     応用プログラミング,
-    データ構造とアルゴリズム,
-    人工知能,
-    グラフィックスの理論,
-    ヒューマンインターフェース,
-    画像工学,
-    パターン認識と機械学習,
+    プログラミング言語,
+    オープンソースソフトウェア,
+    計算機工学,
+    論理回路,
+    コンピュータアーキテクチャ,
+    コンピュータネットワーク,
+    データベース,
+    情報セキュリティ,
+    コンパイラ,
+    情報リスクマネジメント,
+    "Webアプリケーション&サービス",
     情報コミュニケーション技術,
-    知的財産権,
-    視覚デザイン・演習,
-    ディジタルデザイン基礎実習,
-    CAD実習,
-    色彩計画,
-    感性デザイン論,
-    Webデザイン論,
-    視覚デザイン論
+    技術者倫理,
+    知的財産権
     CStyle
+
 
 #    "English Basic L&S I",
 #    "English Basic L&S II",
@@ -73,5 +72,5 @@ digraph G {
 #    "English for Specific Purpose II"
 #    DStyle
 
-    include(CTreeGrade.dot)
+#    include(CTreeGrade.dot)
 }

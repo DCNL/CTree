@@ -13,37 +13,37 @@ digraph G {
     include(CTreeCommon.dot)
 
 define(`DP1Style',
-	ifdef(`COLOR', 
+	ifdef(`COLOR',
 	    ``[style=filled,fillcolor=yellow]'',
 	        ``[style=filled,fontname=bold,fontcolor=white,fillcolor=black,penwidth=4]''))
 
 define(`DP2aStyle',
-	ifdef(`COLOR', 
+	ifdef(`COLOR',
 	    ``[style=filled,fillcolor=greenyellow]'',
 	        ``[style=filled,fontname=bold,fontcolor=white,fillcolor=black,penwidth=4]''))
 
 define(`DP2bStyle',
-	ifdef(`COLOR', 
+	ifdef(`COLOR',
 	    ``[style=filled,fillcolor=greenyellow]'',
 	        ``[style=filled,fontname=bold,fontcolor=white,fillcolor=black,penwidth=4]''))
 
 define(`DP2cStyle',
-	ifdef(`COLOR', 
+	ifdef(`COLOR',
 	    ``[style=filled,fillcolor=greenyellow]'',
 	        ``[style=filled,fontname=bold,fontcolor=white,fillcolor=black,penwidth=4]''))
 
 define(`DP2dStyle',
-	ifdef(`COLOR', 
+	ifdef(`COLOR',
 	    ``[style=filled,fillcolor=greenyellow]'',
 	        ``[style=filled,fontname=bold,fontcolor=white,fillcolor=black,penwidth=4]''))
 
 define(`DP3Style',
-	ifdef(`COLOR', 
+	ifdef(`COLOR',
 	    ``[style=filled,fillcolor=pink]'',
 	        ``[style=filled,fontname=bold,fontcolor=white,fillcolor=black,penwidth=4]''))
 
 define(`DP4Style',
-	ifdef(`COLOR', 
+	ifdef(`COLOR',
 	    ``[style=filled,fillcolor=aquamarine]'',
 	        ``[style=filled,fontname=bold,fontcolor=white,fillcolor=black,penwidth=4]''))
 
@@ -54,27 +54,22 @@ define(`DP4Style',
     技術者倫理,
     知的財産権
     DP1Style
-    
+
     基礎ゼミ,
     コンピュータリテラシー,
     情報工学輪講,
     情報工学概論,
     データリテラシー,
     信号処理,
-    データ構造とアルゴリズムI,
-    データ構造とアルゴリズムII,
     アセンブリ言語,
     計算機工学,
     電子回路,
     論理回路,
     センサ工学,
-    コンピュータアーキテクチャI,
     通信工学,
-    コンピュータアーキテクチャII,
     コンピュータネットワーク,
     データベース,
     オペレーティングシステム,
-    コンパイラ,
     情報工学特講A,
     情報工学特講B,
     情報技術者演習,
@@ -84,14 +79,18 @@ define(`DP4Style',
     ディジタルデザイン応用実習,
     デザイン表現法・演習,
     ディジタルデザイン基礎実習,
-    CAD実習
+    CAD実習,
+    データ構造とアルゴリズム,
+    データ構造とアルゴリズム演習,
+    コンパイラ,
+    コンピュータアーキテクチャ,
+    情報システムの構成
     DP2aStyle
 
     視覚デザイン・演習,
     視覚デザイン論,
     感性デザイン論,
     Webデザイン論,
-    離散構造,
     ロボット工学,
     情報セキュリティ,
     音と音声,
@@ -101,19 +100,20 @@ define(`DP4Style',
     自然言語処理,
     コンピュータグラフィックス,
     画像工学,
-    パターン認識と機械学習
+    パターン認識と機械学習,
+    データサイエンス
     DP2bStyle
 
     情報メディア実験,
-    オブジェクト指向プログラミング,
     "Webアプリケーション&サービス演習",
     スマートシステム演習,
     オープンソースソフトウェア,
-    システム設計論,
     情報機器インターフェース,
     "Webアプリケーション&サービス",
     ヒューマンインターフェース,
-    ユーザエクスペリエンスデザイン
+#    ユーザエクスペリエンスデザイン,
+    知的データ処理演習,
+    ソフトウェア工学
     DP2cStyle
 
     プログラミングI,
@@ -125,20 +125,19 @@ define(`DP4Style',
     ビジュアルコンピューティング演習,
     プログラミング言語,
     情報リスクマネジメント,
-    情報とモノづくり
+    情報とモノづくり,
+    ソフトウェア工学演習
     DP2dStyle
 
     日本語コミュニケーションI,
     日本語コミュニケーションII,
-    テクニカルライティング, 
+    テクニカルライティング,
     情報コミュニケーション技術
     DP3Style
 
     GT1s, GT1, GT2s, GT2, GT3
     DP4Style
 
-    数学入門I,
-    数学入門II,
     基礎解析I,
     基礎解析II,
     解析学I,
@@ -150,7 +149,7 @@ define(`DP4Style',
     線形代数II,
     物理学I,
     物理学II,
-    SL1, SL2, 
+    SL1, SL2,
     Chem1,Chem2,Chem3,Chem4,Chem5,Chem6,Chem7,Chem8
     DP1Style
 

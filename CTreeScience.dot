@@ -22,7 +22,6 @@
     線形代数I
     解析学I
     基礎解析I
-    数学入門I
 
     subgraph clusterM1 {
         style=rounded
@@ -35,11 +34,9 @@
     線形代数II
     解析学II
     基礎解析II
-    数学入門II
 
     物理学I	-> 物理学II
     線形代数I -> 線形代数II
-    数学入門I -> 数学入門II
     基礎解析I -> 基礎解析II
 
     SL1 -> SL2 [style=invis]

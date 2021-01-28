@@ -26,8 +26,6 @@ digraph G {
     Chem1->Chem2->Chem3->Chem4->Chem5->Chem6->Chem7->Chem8
     [style="invis"]
 
-    数学入門I
-	-> 数学入門II
     基礎解析I
 	-> 基礎解析II
     {
@@ -55,7 +53,7 @@ digraph G {
     "English Intermediate R&W I",
     "English Intermediate R&W II"
     RStyle
-    
+
     "English for Specific Purpose I",
     "English for Specific Purpose II"
     DStyle
