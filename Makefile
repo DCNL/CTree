@@ -5,7 +5,7 @@
 %.pdf: %.dot
 	m4 -DCOLOR $< | dot -Tpdf -Gsize=11.69,8.27 -Gratio="expand" -o $@
 
-all: CTreeDP.pdf CTreeCSE.pdf CTreeCIS.pdf CTreeCAI.pdf CTreeVC.pdf
+all: CTreeDP.pdf CTreeCSE.pdf CTreeCIS.pdf CTreeCAI.pdf CTreeVC.pdf CTreeFI.pdf
 #all: CTreeSE.pdf CTreeCS.pdf CTreeIS.pdf CTreeAI.pdf CTreeSC.pdf\
 #	CTreeVC.pdf CTreeCW.pdf CTreeFI.pdf CTreeFrame.pdf\
 #	CTreeMJHEP.pdf CTreeDP.pdf CTreeDS.pdf

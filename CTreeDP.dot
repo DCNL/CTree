@@ -108,10 +108,10 @@ define(`DP4Style',
     "Webアプリケーション&サービス演習",
     スマートシステム演習,
     オープンソースソフトウェア,
-    情報機器インターフェース,
+    情報機器インタフェース,
     "Webアプリケーション&サービス",
-    ヒューマンインターフェース,
-#    ユーザエクスペリエンスデザイン,
+    ヒューマンインタフェース,
+    ユーザエクスペリエンスデザイン,
     知的データ処理演習,
     ソフトウェア工学
     DP2cStyle
@@ -163,7 +163,7 @@ define(`DP4Style',
     "English Intermediate L&S II" DP3Style
     "English Intermediate R&W I",
     "English Intermediate R&W II" DP3Style
-    "English for Specific Purpose I",
-    "English for Specific Purpose II" DP3Style
+    "ESP-A",
+    "ESP-B" DP3Style
     include(CTreeGrade.dot)
 }

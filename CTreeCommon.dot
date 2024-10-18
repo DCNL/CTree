@@ -3,8 +3,8 @@
 {
     rank = same
     基礎ゼミ
-    情報工学概論
     コンピュータリテラシー
+    情報工学概論
     D1S [style="invis"]
 }
 
@@ -40,9 +40,8 @@ subgraph clusterP1 {
 
 subgraph clusterA0 {
     style=invis
-    確率統計
     データベース
-    データリテラシー
+    データリテラシー -> 確率統計[constraint=false]
     AIと社会
 }
 
@@ -69,20 +68,22 @@ subgraph clusterH1 {
 {
     rank = same
     rankdir = TB
+
     コンピュータネットワーク
     論理回路
     情報メディア実験
 }
 
 ###  2年前期への接続
-
     プログラミングI -> プログラミングII
+    プログラミングI -> データベース
     プログラミングI -> 情報メディア実験 [constraint=false]
     プログラミング基礎I -> プログラミング基礎II
     計算機工学 -> 論理回路
     コンピュータリテラシー -> データリテラシー
     ディジタルデザイン基礎実習 -> ディジタルデザイン応用実習 [ltail=clusterD1;lhead=clusterD2s]
     プログラミングI -> データリテラシー[constraint=false;ltail=clusterP1]
+    情報工学概論 -> AIと社会#[style=invis]
 
 # 2年後期
 
@@ -127,7 +128,7 @@ subgraph clusterSS {
 
     プログラミングII -> 応用プログラミング [ltail=clusterP2]
     情報メディア実験 -> 応用プログラミング
-    データベース -> データ構造とアルゴリズム演習 [lhead=clusterP3]
+#teraoka    データベース -> データ構造とアルゴリズム演習 [lhead=clusterP3]
     プログラミング基礎II -> データ構造とアルゴリズム
     プログラミングII -> データ構造とアルゴリズム演習
     確率統計 -> 情報セキュリティ [lhead=clusterSec]
@@ -135,7 +136,7 @@ subgraph clusterSS {
     コンピュータネットワーク -> 情報セキュリティ[lhead=clusterSec]
     コンピュータネットワーク -> 応用プログラミング
     論理回路 -> コンピュータアーキテクチャ
-    データリテラシー -> 人工知能
+#teraoka    データリテラシー -> 人工知能 
     電子回路 -> 信号処理
     ディジタルデザイン応用実習 -> Webデザイン論 [lhead=clusterD2;ltail=clusterD2s]
     D1S -> 情報コミュニケーション技術      [style="invis"]
@@ -168,12 +169,12 @@ subgraph clusterA1 {
 
 subgraph clusterP4 {
     style=rounded
-    コンパイラ
-    プログラミング言語
+#    プログラミング言語
     {
         rank=same
         ソフトウェア工学 -> ソフトウェア工学演習
     }
+    プログラミング言語
 }
 
 subgraph clusterS1 {
@@ -243,26 +244,36 @@ subgraph clusterW1 {
 subgraph clusterS2 {
     style=rounded
     オープンソースソフトウェア
-    ヒューマンインターフェース
+    ヒューマンインタフェース
 }
 
-情報機器インターフェース
+コンパイラ
+情報機器インタフェース
 
 ### 3年後期への接続
 
     スマートシステム演習 -> パターン認識と機械学習 [ltail=clusterA1;lhead=clusterA2]
     シミュレーションとモデル -> データサイエンス
+    シミュレーションとモデル -> "ビジュアルコンピューティング演習" #teraoka
     技術者倫理 -> 知的財産権 [ltail=clusterFEC1;lhead=clusterFEC2]
     日本語コミュニケーションII -> テクニカルライティング
     情報工学と職業 -> 情報とモノづくり [lhead=clusterC3]
-    ヒューマンインターフェース -> "Webアプリケーション&サービス" [ltail=clusterS2,lhead=clusterW1]
+#    ヒューマンインタフェース -> "Webアプリケーション&サービス" [ltail=clusterS2,lhead=clusterW1]
     情報工学特講A -> 情報工学特講B
-    ロボット工学 -> 情報機器インターフェース
-    オペレーティングシステム -> 情報機器インターフェース
+    ロボット工学 -> 情報機器インタフェース
+    オペレーティングシステム -> 情報機器インタフェース
+    オペレーティングシステム -> GT1s[style="invis"] #teraoka
     グラフィックスの理論 -> コンピュータグラフィックス[lhead=clusterV2]
     情報リスクマネジメント -> "Webアプリケーション&サービス" [lhead=clusterW1]
     応用プログラミング -> "Webアプリケーション&サービス" [style="invis"]
-    視覚デザイン論 -> "ビジュアルコンピューティング演習" [lhead=clusterV2, constraint=false]
+    視覚デザイン論 -> "ビジュアルコンピューティング演習" [lhead=clusterV2,constraint=false]
+    視覚デザイン論 -> ヒューマンインタフェース [style="invis"] #teraoka
+    プログラミング言語 -> オープンソースソフトウェア[ltail=clusterP4,lhead=clusterS2] #teraoka
+    プログラミング言語 -> コンパイラ[ltail=clusterP4] #teraoka
+#    ソフトウェア工学 -> オープンソースソフトウェア[ltail=clusterP4,lhead=clusterS2] #teraoka
+#    ソフトウェア工学 -> コンパイラ[ltail=clusterP4,lhead=clusterS2] #teraoka
+    データベース -> "Webアプリケーション&サービス" [lhead=clusterW1]
+
 
 ## 卒業研究
 
@@ -287,15 +298,18 @@ style=rounded
 GT1s -> GT2s -> GT3
 }
 }
-#     情報機器インターフェース -> GT1s [style="invis"]
+#     情報機器インタフェース -> GT1s [style="invis"]
 ロボット工学 -> GT1s [style="invis"]
 スマートシステム演習 -> GT1s [style="invis"]
+#プログラミング言語 -> 情報工学輪講 [lhead=clusterGT;ltail=clusterP4]
 
 #     ロボット工学 -> 情報工学輪講 [lhead=clusterGT]
-情報機器インターフェース -> 情報工学輪講 [lhead=clusterGT]
+情報機器インタフェース -> 情報工学輪講 [lhead=clusterGT]
 "Webアプリケーション&サービス" -> 情報工学輪講 [ltail=clusterW1;lhead=clusterGT]
-パターン認識と機械学習 -> 情報工学輪講 [lhead=clusterGT]
+#パターン認識と機械学習 -> 情報工学輪講 [lhead=clusterGT;ltail=clusterA2]
+知的データ処理演習 -> 情報工学輪講 [lhead=clusterGT;ltail=clusterA2]
 コンピュータグラフィックス -> 情報工学輪講 [lhead=clusterGT;ltail=clusterV2]
-#     コンパイラ -> 情報工学輪講 [lhead=clusterGT;constaint=false]
+コンパイラ -> 情報工学輪講 [lhead=clusterGT;constaint=false]
 情報とモノづくり -> 情報工学輪講 [lhead=clusterGT;ltail=clusterC3]
 テクニカルライティング -> 情報工学輪講 [lhead=clusterGT;ltail=clusterFEC2;constaint=false]
+オープンソースソフトウェア -> 情報工学輪講 [lhead=clusterGT;ltail=clusterS2]

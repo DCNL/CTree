@@ -7,9 +7,9 @@ digraph G {
     include(CTreeColor.dot)
 #    include(CTreeInternational.dot)
 #    include(CTreeForeign.dot)
-#    include(CTreeLiberalArts.dot)
-#    include(CTreeEnglish.dot)
-#    include(CTreeScience.dot)
+    include(CTreeLiberalArts.dot)
+    include(CTreeEnglish.dot)
+    include(CTreeScience.dot)
     include(CTreeCommon.dot)
     include(CTreeGrade.dot)
 
@@ -49,6 +49,7 @@ digraph G {
     コンピュータネットワーク,
     データベース,
     情報セキュリティ,
+    オペレーティングシステム,
     コンパイラ,
     情報リスクマネジメント,
     "Webアプリケーション&サービス",
@@ -58,19 +59,19 @@ digraph G {
     CStyle
 
 
-#    "English Basic L&S I",
-#    "English Basic L&S II",
-#    "English Intermediate L&S I",
-#    "English Intermediate L&S II",
-#    "English Basic R&W I",
-#    "English Basic R&W II",
-#    "English Intermediate R&W I",
-#    "English Intermediate R&W II"
-#    RStyle
+    "English Basic L&S I",
+    "English Basic L&S II",
+    "English Intermediate L&S I",
+    "English Intermediate L&S II",
+    "English Basic R&W I",
+    "English Basic R&W II",
+    "English Intermediate R&W I",
+    "English Intermediate R&W II"
+    RStyle
 
-#    "English for Specific Purpose I",
-#    "English for Specific Purpose II"
-#    DStyle
+    "ESP-A",
+    "ESP-B"
+    DStyle
 
 #    include(CTreeGrade.dot)
 }

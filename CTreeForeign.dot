@@ -1,14 +1,14 @@
 {
         JPD1 [style="invis"]
         JPD2 [style="invis"]
-	JPG1 [label= "総合日本語(1)"]
-	JPG2 [label= "総合日本語(2)"]
-	JPE1 [label= "工学日本語(1)"]
-	JPE2 [label= "工学日本語(2)"]
-	JPG3 [label= "総合日本語(3)"]
-	JPG4 [label= "総合日本語(4)"]
-	JPE3 [label= "工学日本語(3)"]
-	JPE4 [label= "工学日本語(4)"]
+	JPG1 [label= "総合日本語I-B"]
+	JPG2 [label= "総合日本語I-A"]
+	JPE1 [label= "工学日本語I-B"]
+	JPE2 [label= "工学日本語I-A"]
+	JPG3 [label= "総合日本語II-B"]
+	JPG4 [label= "総合日本語II-A"]
+	JPE3 [label= "工学日本語II-B"]
+	JPE4 [label= "工学日本語II-A"]
 
 	subgraph clusterFS {
 		 label = "留学生対象科目"; fontsize=25

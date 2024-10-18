@@ -1,12 +1,12 @@
 {
-    Chem1 [label="化学 I"]
-    Chem2 [label="化学 II"]
-    Chem3 [label="化学 I"]
-    Chem4 [label="化学 II"]
-    Chem5 [label="化学 I"]
-    Chem6 [label="化学 II"]
-    Chem7 [label="化学 I"]
-    Chem8 [label="化学 II"]
+    Chem1 [label="化学 A"]
+    Chem2 [label="化学 B"]
+    Chem3 [label="化学 A"]
+    Chem4 [label="化学 B"]
+    Chem5 [label="化学 A"]
+    Chem6 [label="化学 B"]
+    Chem7 [label="化学 A"]
+    Chem8 [label="化学 B"]
 
     Chem1->Chem2
     Chem3->Chem4
