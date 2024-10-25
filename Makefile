@@ -6,10 +6,13 @@
 	m4 -DCOLOR $< | dot -Tpdf -o $@
 %.png: %.dot
 	m4 -DCOLOR $< | dot -Tpng -o $@
+%.drawio: %.dot
+	m4 -DCOLOR $< >temp.dot ; graphviz2drawio temp.dot -o $@ ; rm temp.dot
 
 all: allpng
 allpng: CTreeDP.png CTreeCSE.png CTreeCIS.png CTreeCAI.png CTreeVC.png CTreeFI.png
 allpdf: CTreeDP.pdf CTreeCSE.pdf CTreeCIS.pdf CTreeCAI.pdf CTreeVC.pdf CTreeFI.pdf
+drawio: CTreeDP.drawio CTreeCSE.drawio CTreeCIS.drawio CTreeCAI.drawio CTreeVC.drawio CTreeFI.drawio
 
 #all: CTreeSE.pdf CTreeCS.pdf CTreeIS.pdf CTreeAI.pdf CTreeSC.pdf\
 #	CTreeVC.pdf CTreeCW.pdf CTreeFI.pdf CTreeFrame.pdf\

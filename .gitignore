@@ -1,3 +1,5 @@
 *.pdf
 *.png
 *.svg
+*.xml
+*.drawio
